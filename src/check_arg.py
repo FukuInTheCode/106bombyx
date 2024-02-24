@@ -30,12 +30,12 @@ def is_float(num):
 
 def check_arg(abrs: list[str]) -> int:
     if len(abrs) == 2:
-        if is_float(abrs[0]) and is_float(abrs[1]) and float(abrs[0]) > 0 and is_between_one_and_four(float(abrs[1])):
+        if is_float(abrs[0]) and is_float(abrs[1]) and float(abrs[0]) >= 0 and is_between_one_and_four(float(abrs[1])):
             do_case1(float(abrs[0]), float(abrs[1]))
             return 0
         sys.exit(84)
     if len(abrs) == 3:
-        if is_float(abrs[0]) and is_int(abrs[1]) and is_int(abrs[2]) and float(abrs[0]) > 0 and int(abrs[1]) > 0 and int(abrs[2]) > 0 and int(abrs[2]) >= int(abrs[1]) > 0:
+        if is_float(abrs[0]) and is_int(abrs[1]) and is_int(abrs[2]) and float(abrs[0]) >= 0 and int(abrs[1]) > 0 and int(abrs[2]) > 0 and int(abrs[2]) > int(abrs[1]) > 0:
             do_case2(float(abrs[0]), int(abrs[1]), int(abrs[2]))
             return 0
         return 84
