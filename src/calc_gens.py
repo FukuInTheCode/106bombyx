@@ -12,4 +12,4 @@ def calc_all_gens(k: float, n: float, end: int) -> list[float]:
 
 
 def calc_gen(k: float, last: float) -> float:
-    return float(k * last * (1000 - last) / 1000)
+    return max(0, float(k * last * (1000 - last) / 1000))
