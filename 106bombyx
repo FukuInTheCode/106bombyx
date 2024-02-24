@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+
+from sys import argv
+
+
+def main() -> int:
+    if len(argv) == 2 and argv[1] == "-h":
+        return 0 #display_usage()
+    return 0
+
+
+if __name__ == "__main__":
+    exit(main())
