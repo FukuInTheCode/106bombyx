@@ -1,5 +1,5 @@
 def print_gen(x: float, y: float) -> None:
-    print(x, y)
+    print("{:d} {:.2f}".format(x, y))
 
 
 def print_gens(xs: list[float], ys: list[float]) -> None:
