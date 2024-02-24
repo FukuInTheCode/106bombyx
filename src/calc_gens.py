@@ -1,8 +1,14 @@
 def calc_gens(n: float, k: float, start: int, end: int) -> list[float]:
-    sequence = [n]
-    for i in range(start + 1, end + 1):
-        sequence.append(calc_gen(k, sequence[-1]))
+    all_sequence = calc_all_gens(k, n, end)
+    sequence = all_sequence[start - 1:end]
     return sequence
+
+
+def calc_all_gens(k: float, n: float, end: int) -> list[float]:
+    all_sequence = [n]
+    for i in range(1, end):
+        all_sequence.append(calc_gen(k, all_sequence[-1]))
+    return all_sequence
 
 
 def calc_gen(k: float, last: float) -> float:
