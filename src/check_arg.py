@@ -1,8 +1,8 @@
 import sys
 
 
-from src.do_case1 import do_case1.py
-from src.do_case2 import do_case2.py
+from src.case1 import do_case1
+from src.case2 import do_case2
 
 
 def is_between_one_and_four(number):
@@ -37,7 +37,7 @@ def check_arg(abrs: list[str]) -> int:
     if len(abrs) == 3:
         if is_float(abrs[0] and is_int(abrs[1]) and is_int(abrs[2])) and int(abrs[0]) > 0 and int(
                 abrs[1]) > 0 and int(abrs[2]) > 0 and int(abrs[2]) > int(abrs[1]) > 0:
-            do_case2(float(abrs[0]), int(abrs[1], int(abrs[2])))
+            do_case2(float(abrs[0]), int(abrs[1]), int(abrs[2]))
             return 0
         return 84
     return 84
